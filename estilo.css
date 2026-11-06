@@ -1,0 +1,211 @@
+/* AcaDex - estilo das páginas internas (o login usa EstiloLogin.css) */
+
+:root {
+    --azul-escuro: #1e3a8a;
+    --azul: #2563eb;
+    --azul-claro: #dbeafe;
+    --texto: #0f172a;
+    --suave: #64748b;
+    --borda: #e2e8f0;
+    --fundo: #f1f5f9;
+    --verde: #15803d;
+    --vermelho: #b91c1c;
+    --amarelo: #b45309;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+a { color: var(--azul); }
+
+/* ---------- Topo / menu ---------- */
+.topo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 12px 24px;
+    background: var(--azul-escuro);
+    color: #fff;
+}
+.topo a { color: #fff; text-decoration: none; }
+.marca { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+.menu { display: flex; flex: 1; flex-wrap: wrap; gap: 6px; }
+.menu a { padding: 6px 12px; border-radius: 6px; }
+.menu a:hover { background: rgba(255, 255, 255, 0.15); }
+.utilizador { font-size: 14px; }
+.utilizador a { text-decoration: underline; }
+
+.badge {
+    display: inline-block;
+    min-width: 20px;
+    padding: 0 6px;
+    border-radius: 10px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ---------- Estrutura ---------- */
+.conteudo { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+.rodape { padding: 24px; text-align: center; font-size: 13px; color: var(--suave); }
+
+h1 { font-size: 26px; color: var(--azul-escuro); margin-bottom: 4px; }
+h2 { font-size: 19px; color: var(--azul-escuro); margin: 26px 0 10px; }
+h3 { font-size: 16px; margin-bottom: 4px; }
+.sub { color: var(--suave); font-size: 14px; margin-bottom: 14px; }
+
+.cartao {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.grelha {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+    margin-bottom: 8px;
+}
+.grelha .cartao { margin-bottom: 0; }
+
+.numero { font-size: 32px; font-weight: 700; color: var(--azul); line-height: 1.1; }
+.vazio { color: var(--suave); font-style: italic; }
+
+/* ---------- Avisos ---------- */
+.flash { padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
+.flash-ok   { background: #dcfce7; color: var(--verde); border: 1px solid #bbf7d0; }
+.flash-erro { background: #fee2e2; color: var(--vermelho); border: 1px solid #fecaca; }
+
+/* ---------- Abas ---------- */
+.abas { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 2px solid var(--borda); margin: 16px 0; }
+.abas a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--suave);
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+.abas a:hover { color: var(--azul); }
+.abas a.ativa { color: var(--azul); border-bottom-color: var(--azul); }
+
+/* ---------- Botões ---------- */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover { background: #1d4ed8; }
+.btn-sec { background: #e2e8f0; color: #334155; }
+.btn-sec:hover { background: #cbd5e1; }
+.btn-perigo { background: #fee2e2; color: var(--vermelho); }
+.btn-perigo:hover { background: #fecaca; }
+.btn-peq { padding: 4px 10px; font-size: 13px; }
+.acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.acoes form { display: inline; }
+
+/* ---------- Etiquetas ---------- */
+.etiqueta {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: var(--azul-claro);
+    color: var(--azul-escuro);
+    font-size: 12px;
+    font-weight: 600;
+}
+.etiqueta.ok    { background: #dcfce7; color: var(--verde); }
+.etiqueta.aviso { background: #fef3c7; color: var(--amarelo); }
+.etiqueta.erro  { background: #fee2e2; color: var(--vermelho); }
+
+/* ---------- Tabelas ---------- */
+.tabela-scroll { overflow-x: auto; margin-bottom: 16px; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--borda);
+}
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--borda); font-size: 14px; vertical-align: top; }
+th { background: #f8fafc; color: var(--suave); font-weight: 600; }
+tr:last-child td { border-bottom: none; }
+
+/* ---------- Formulários ---------- */
+label { display: block; margin: 12px 0 4px; font-size: 14px; font-weight: 600; }
+input[type="text"], input[type="url"], input[type="number"], input[type="datetime-local"],
+input[type="file"], select, textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+    font-size: 14px;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+textarea { min-height: 100px; resize: vertical; }
+form .btn { margin-top: 14px; }
+.linha { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+.linha > * { flex: 1 1 160px; }
+.linha .btn { flex: 0 0 auto; margin-top: 0; }
+.nota-input { width: 80px; }
+
+/* Botões "em linha" (dentro de listas, tabelas, barras de ações) não levam margem de cima */
+.acoes .btn, .lista-aulas .btn, .cabeca-modulo .btn, td .btn, .linha .btn, .navegacao-aulas .btn { margin-top: 0; }
+.acoes { align-items: center; }
+
+details.cartao summary { cursor: pointer; font-weight: 600; color: var(--azul); }
+details.cartao[open] summary { margin-bottom: 8px; }
+
+/* ---------- Aulas ---------- */
+.lista-aulas { list-style: none; }
+.lista-aulas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--borda);
+}
+.lista-aulas li:last-child { border-bottom: none; }
+.lista-aulas a { font-weight: 600; text-decoration: none; }
+.lista-aulas a:hover { text-decoration: underline; }
+.cabeca-modulo { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+
+.video { position: relative; padding-top: 56.25%; margin-bottom: 16px; border-radius: 12px; overflow: hidden; background: #000; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.texto-livre { white-space: normal; }
+
+.navegacao-aulas { display: flex; justify-content: space-between; gap: 8px; margin-top: 16px; }
+
+/* ---------- Mensagens ---------- */
+.nao-lida td { font-weight: 700; background: #f8fbff; }
+
+@media (max-width: 600px) {
+    .topo { padding: 12px 16px; }
+    h1 { font-size: 22px; }
+}

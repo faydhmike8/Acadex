@@ -1,0 +1,143 @@
+/* AcaDex - Estilo da página de login */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb 55%, #38bdf8);
+}
+
+/* Cartão do formulário */
+.form-example {
+    width: 100%;
+    max-width: 360px;
+    padding: 36px 32px 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Título "AcaDex" sem alterar o HTML */
+.form-example::before {
+    content: "AcaDex";
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1e3a8a;
+}
+
+/* Remove as quebras de linha, o espaçamento é feito pelo CSS */
+.form-example br {
+    display: none;
+}
+
+/* Campos de texto e senha */
+.form-example input[type="text"],
+.form-example input[type="password"] {
+    display: block;
+    width: 100%;
+    margin: 6px 0 18px;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-example input[type="text"]:focus,
+.form-example input[type="password"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Botões */
+.form-example input[type="submit"],
+.form-example input[type="reset"] {
+    width: calc(50% - 6px);
+    padding: 11px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.form-example input[type="submit"] {
+    margin-right: 8px;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.form-example input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+.form-example input[type="reset"] {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.form-example input[type="reset"]:hover {
+    background: #cbd5e1;
+}
+
+.form-example input[type="submit"]:active,
+.form-example input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+/* Mensagens de erro ou sucesso */
+.form-example .mensagem {
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 13px;
+    text-align: center;
+}
+
+.form-example .mensagem a {
+    color: #1d4ed8;
+}
+
+/* Link para registo / login */
+.link-registo {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-registo:hover {
+    text-decoration: underline;
+}
+
+/* Telemóveis */
+@media (max-width: 420px) {
+    .form-example {
+        margin: 0 16px;
+        padding: 28px 22px;
+    }
+}

@@ -1,0 +1,4 @@
+# Bloqueia o acesso direto a esta pasta pelo navegador.
+# Os ficheiros só podem ser descarregados através do download.php,
+# que confirma o login e se a pessoa tem acesso ao curso.
+Require all denied
